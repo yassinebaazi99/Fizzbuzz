@@ -6,21 +6,15 @@ namespace reverseword
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a word to reverse:");
-            string input = Console.ReadLine();
+            Console.Write("Enter a word: ");
+            string word = Console.ReadLine();
 
-            if (!string.IsNullOrEmpty(input))
+            Console.Write("Reversed word: ");
+            for (int i = word.Length - 1; i >= 0; i--)
             {
-                char[] charArray = input.ToCharArray();
-                Array.Reverse(charArray);
-                string reversed = new string(charArray);
-
-                Console.WriteLine("Reversed word: " + reversed);
+                Console.Write(word[i]);
             }
-            else
-            {
-                Console.WriteLine("Invalid input. Please enter a non-empty word.");
-            }
+            Console.WriteLine();
         }
     }
 }
